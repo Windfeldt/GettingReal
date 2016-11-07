@@ -12,8 +12,8 @@ namespace GettingReal
         public readonly static DateTime DateToday = DateTime.Today;
         public DateTime birthdate { get; set; }
         public string name { get; set; }
-        public double weight { get; set; }
-        public double weight { get; set; }
+        public double birthWeight { get; set; }
+        public double currentWeight { get; set; }
 
         public string calculateAgeFromBirthdate(DateTime Birthdate)
         {

@@ -13,7 +13,7 @@ namespace GettingReal
         public DateTime birthdate { get; set; }
         public string name { get; set; }
         public double weight { get; set; }
-        public double weight { get; set; }
+        int hej = 10;
 
         public string calculateAgeFromBirthdate(DateTime Birthdate)
         {

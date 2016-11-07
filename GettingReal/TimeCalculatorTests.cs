@@ -16,7 +16,7 @@ namespace GettingReal
         public void returnTodaysDate()
         {
 
-            Assert.AreEqual(DateTime.Today, TimeCalculator.DateToday);
+            Assert.AreEqual(DateTime.Today, Cow.DateToday);
 
         }
 
@@ -24,11 +24,11 @@ namespace GettingReal
         public void canCalculateAgeFromBirthdate()
         {
 
-            TimeCalculator TimeCalculator = new TimeCalculator();
+            Cow cow = new Cow();
             DateTime Birthdate = new DateTime(2014, 10, 1);
             DateTime DateToday = DateTime.Today;
 
-            string ageFormatted = TimeCalculator.calculateAgeFromBirthdate(Birthdate);
+            string ageFormatted = cow.calculateAgeFromBirthdate(Birthdate);
 
             DateTimeSpan dateSpan = DateTimeSpan.CompareDates(Birthdate, DateToday);
             string dateSpanFormatted = "Years: " + dateSpan.Years + " Months " + dateSpan.Months + " Days " + dateSpan.Days;

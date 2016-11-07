@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace GettingReal
 {
-    public class TimeCalculator
+    public class Cow
     {
 
         public readonly static DateTime DateToday = DateTime.Today;
+        public DateTime birthdate { get; set; }
+        public string name { get; set; }
+        public double weight { get; set; }
+        public double weight { get; set; }
 
         public string calculateAgeFromBirthdate(DateTime Birthdate)
         {

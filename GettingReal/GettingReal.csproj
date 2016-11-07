@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DateTimeSpan.cs" />
-    <Compile Include="TimeCalculator.cs" />
+    <Compile Include="Cow.cs" />
     <Compile Include="TimeCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

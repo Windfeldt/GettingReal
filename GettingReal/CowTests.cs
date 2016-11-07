@@ -9,7 +9,7 @@ namespace GettingReal
 {
 
     [TestClass]
-    public class TimeCalculatorTests
+    public class CowTests
     {
 
         [TestMethod]
@@ -26,14 +26,13 @@ namespace GettingReal
 
             Cow cow = new Cow();
             DateTime Birthdate = new DateTime(2014, 10, 1);
+            cow.calculateAgeFromBirthdate(Birthdate);
+
             DateTime DateToday = DateTime.Today;
-
-            string ageFormatted = cow.calculateAgeFromBirthdate(Birthdate);
-
             DateTimeSpan dateSpan = DateTimeSpan.CompareDates(Birthdate, DateToday);
-            string dateSpanFormatted = "Years: " + dateSpan.Years + " Months " + dateSpan.Months + " Days " + dateSpan.Days;
+            string dateSpanFormatted = "Years: " + dateSpan.Years + " Months: " + dateSpan.Months + " Days: " + dateSpan.Days;
 
-            Assert.AreEqual(dateSpanFormatted, ageFormatted);
+            Assert.AreEqual(dateSpanFormatted, cow.age);
 
         }
 

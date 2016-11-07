@@ -34,13 +34,15 @@ namespace GettingReal
         enum Phase { Years, Months, Days, Done }
 
         public static DateTimeSpan CompareDates(DateTime date1, DateTime date2)
-        {/*
+        {
+
+            // Hvis date2 er en "mindre" date end date 1, så byt om på dem.
             if (date2 < date1)
             {
                 var sub = date1;
                 date1 = date2;
                 date2 = sub;
-            }*/
+            }
 
             DateTime current = date1;
             int years = 0;

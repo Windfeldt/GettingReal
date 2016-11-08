@@ -36,7 +36,7 @@ namespace GettingReal
             double daysOver2Years = 0;
 
             // Hvis kalven er ældre end 2 år, så læg de overskydende dage over i "daysOver2Years" og træk dem fra "days".
-            // På denne måde kan bruge forskellige udregninger på de forskellige dage.
+            // På denne måde kan man bruge forskellige udregninger på de forskellige dage.
             if (days - 730 > 0)
             {
                 daysOver2Years = days - 730;

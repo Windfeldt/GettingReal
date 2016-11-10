@@ -61,5 +61,33 @@ namespace GettingReal
 
         }
 
+        [TestMethod]
+        public void canCalculateMaturationDate()
+        {
+
+            Cow cow = new Cow();
+            cow.birthdate = new DateTime(2014, 10, 1);
+            cow.calculateMaturationDate();
+
+            DateTime expected = new DateTime(2016, 10, 1);
+
+            Assert.AreEqual(expected, cow.maturationDate);
+
+        }
+
+        [TestMethod]
+        public void canCalculateDeliveryDate()
+        {
+
+            Cow cow = new Cow();
+            cow.birthdate = new DateTime(2014, 10, 1);
+            cow.calculateDeliveryDate();
+
+            DateTime expected = new DateTime(2016, 12, 1);
+
+            Assert.AreEqual(expected, cow.deliveryDate);
+
+        }
+
     }
 }

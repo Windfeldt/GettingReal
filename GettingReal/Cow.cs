@@ -10,7 +10,7 @@ namespace GettingReal
     {
 
         public readonly static DateTime DateToday = DateTime.Today;
-        public int id { get; set; }
+        public int CHR { get; set; }
         public string name { get; set; }
         public DateTime birthdate { get; set; }
         public string age { get; set; }
@@ -19,6 +19,7 @@ namespace GettingReal
         public DateTime deliveryDate { get; set; }
         public DateTime maturationDate { get; set; }
 
+        // Regner den nuværende alder ud fra fødselsdatoen til dagsdato.
         public void calculateAgeFromBirthdate()
         {
 
@@ -43,7 +44,24 @@ namespace GettingReal
                 days = days - daysOver2Years;
             }
 
+            // Regner den samlede nuværende vægt ud.
             this.currentWeight = this.birthweight + days * 0.75 + daysOver2Years * 1.5;
+
+        }
+
+        // Tilføj 24 måneder til fødselsdatoen for at finde modningsdatoen. 
+        public void calculateMaturationDate()
+        {
+
+            this.maturationDate = this.birthdate.AddMonths(24);
+
+        }
+
+        // Tilføj 26 måneder til fødselsdatoen for at finde afleveringsdatoen.
+        public void calculateDeliveryDate()
+        {
+
+            this.deliveryDate = this.birthdate.AddMonths(26);
 
         }
 

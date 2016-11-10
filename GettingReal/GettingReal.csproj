@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CowRepository.cs" />
     <Compile Include="DateTimeSpan.cs" />
     <Compile Include="Cow.cs" />
     <Compile Include="CowTests.cs" />

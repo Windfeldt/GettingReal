@@ -15,7 +15,7 @@ namespace GettingReal
 
         static CowCRUD()
         {
-
+            
             dbConn = new SqlConnection("Data Source=" + "ealdb1.eal.local" + ";Initial Catalog=" + "ejl38_db" + ";User ID=" + "ejl38_usr" + ";Password=" + "Baz1nga38");
 
         }

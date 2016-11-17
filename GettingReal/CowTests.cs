@@ -89,5 +89,22 @@ namespace GettingReal
 
         }
 
+        [TestMethod]
+        public void sendSqlInsertToDatabase()
+        {
+
+            Cow cow = new Cow();
+            cow.CHR = 5664565;
+            cow.name = "Ole Henriksen";
+            cow.birthdate = new DateTime(2014, 10, 1);
+            cow.birthweight = 45;
+            cow.ownerId = 1;
+
+            int rowsAffected = CowCRUD.Create(cow);
+
+            Assert.AreEqual(1, rowsAffected);
+
+        }
+
     }
 }

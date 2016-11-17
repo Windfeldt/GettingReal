@@ -18,6 +18,7 @@ namespace GettingReal
         public double currentWeight { get; set; }
         public DateTime deliveryDate { get; set; }
         public DateTime maturationDate { get; set; }
+        public int ownerId { get; set; }
 
         // Regner den nuværende alder ud fra fødselsdatoen til dagsdato.
         public void calculateAgeFromBirthdate()

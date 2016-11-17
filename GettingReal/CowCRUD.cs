@@ -23,8 +23,6 @@ namespace GettingReal
         public static int Create(Cow cow)
         {
 
-            cow.calculateMaturationDate();
-            cow.calculateDeliveryDate();
             string sqlString = "INSERT INTO GettingReal_Calves (CHR, Name, Birthdate, Birthweight, DeliveryDate, MaturationDate, OwnerID) VALUES (" + cow.CHR + ", '" + cow.name + "', '" + cow.birthdate.ToShortDateString() + "', " + cow.birthweight + ", '" + cow.deliveryDate.ToShortDateString() + "', '" + cow.maturationDate.ToShortDateString() + "', " + cow.ownerId + ")";
             SqlCommand cmd = new SqlCommand(sqlString, dbConn);
 
@@ -40,14 +38,28 @@ namespace GettingReal
 
         }
 
-        public static void Update()
+        public static int Update(Cow cow)
         {
+            string sqlString = "UPDATE GettingReal_Calves SET CHR='" + cow.CHR + "', Name='" + cow.name + "', Birthdate='" + cow.birthdate.ToShortDateString() + "', Birthweight='" + cow.birthweight + "', DeliveryDate='" + cow.deliveryDate.ToShortDateString() + "', MaturationDate='" + cow.maturationDate.ToShortDateString() + "', OwnerID='" + cow.ownerId + "";
+            SqlCommand cmd = new SqlCommand(sqlString, dbConn);
 
+            dbConn.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            dbConn.Close();
+
+            return rowsAffected;
         }
 
-        public static void Delete()
+        public static int Delete(Cow cow)
         {
+            string sqlString = "DELETE FROM GettingReal_Calves WHERE CHR = " + cow.CHR;
+            SqlCommand cmd = new SqlCommand(sqlString, dbConn);
 
+            dbConn.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            dbConn.Close();
+
+            return rowsAffected;
         }
 
     }

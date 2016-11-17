@@ -89,22 +89,43 @@ namespace GettingReal
 
         }
 
-        [TestMethod]
+        /*[TestMethod]
         public void sendSqlInsertToDatabase()
         {
 
             Cow cow = new Cow();
-            cow.CHR = 5664565;
+            cow.CHR = 5664566;
             cow.name = "Ole Henriksen";
             cow.birthdate = new DateTime(2014, 10, 1);
             cow.birthweight = 45;
             cow.ownerId = 1;
+            cow.calculateMaturationDate();
+            cow.calculateDeliveryDate();
 
             int rowsAffected = CowCRUD.Create(cow);
 
             Assert.AreEqual(1, rowsAffected);
 
-        }
+        }*/
+
+        /*[TestMethod]
+        public void sendSqlDeleteToDatabase()
+        {
+
+            Cow cow = new Cow();
+            cow.CHR = 5664566;
+            cow.name = "Ole Henriksen";
+            cow.birthdate = new DateTime(2014, 10, 1);
+            cow.birthweight = 45;
+            cow.ownerId = 1;
+            cow.calculateMaturationDate();
+            cow.calculateDeliveryDate();
+
+            int rowsAffected = CowCRUD.Delete(cow);
+
+            Assert.AreEqual(1, rowsAffected);
+
+        }*/
 
     }
 }

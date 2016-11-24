@@ -30,7 +30,7 @@ namespace GettingReal
 
                     if (reader.HasRows == true)
                     {
-
+                        
                         reader.Read();
                         User.id = Convert.ToInt32(reader.GetValue(0));
                         User.name = Convert.ToString(reader.GetValue(1));

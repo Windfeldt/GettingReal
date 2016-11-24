@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Data.SqlClient;
 
 namespace GettingReal
 {
@@ -109,6 +110,25 @@ namespace GettingReal
         }*/
 
         /*[TestMethod]
+        public void sendSqlUpdateToDatabase()
+        {
+
+            Cow cow = new Cow();
+            cow.CHR = 5664566;
+            cow.name = "Ole Henriksen Jr";
+            cow.birthdate = new DateTime(2014, 10, 1);
+            cow.birthweight = 45;
+            cow.ownerId = 1;
+            cow.calculateMaturationDate();
+            cow.calculateDeliveryDate();
+
+            int rowsAffected = CowCRUD.Update(cow);
+
+            Assert.AreEqual(1, rowsAffected);
+
+        }*/
+
+        /*[TestMethod]
         public void sendSqlDeleteToDatabase()
         {
 
@@ -132,5 +152,21 @@ namespace GettingReal
             Cow cow = new Cow();
             Assert.AreEqual("Simon", cow.name);
         }*/
+<<<<<<< HEAD
+=======
+
+        // SKRIV DENNE TEST/KODE FÆRDIG
+        [TestMethod]
+        public void sendSqlSelectToDatabase()
+        {
+
+            SqlDataReader reader = CowCRUD.Read();
+            reader.Read();
+
+            Assert.AreEqual(5664564, reader.GetValue(0));
+
+        }
+
+>>>>>>> origin/Munck
     }
 }

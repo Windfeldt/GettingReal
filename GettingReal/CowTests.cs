@@ -152,8 +152,6 @@ namespace GettingReal
             Cow cow = new Cow();
             Assert.AreEqual("Simon", cow.name);
         }*/
-<<<<<<< HEAD
-=======
 
         // SKRIV DENNE TEST/KODE FÆRDIG
         [TestMethod]
@@ -166,7 +164,5 @@ namespace GettingReal
             Assert.AreEqual(5664564, reader.GetValue(0));
 
         }
-
->>>>>>> origin/Munck
     }
 }

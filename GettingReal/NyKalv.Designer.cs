@@ -33,11 +33,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BirthweightText = new System.Windows.Forms.TextBox();
-            this.BirthdayText = new System.Windows.Forms.TextBox();
-            this.CHRText = new System.Windows.Forms.TextBox();
             this.NavnText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.BirtheDate = new System.Windows.Forms.DateTimePicker();
+            this.BirthWeight = new System.Windows.Forms.NumericUpDown();
+            this.CHR = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthWeight)).BeginInit();
             this.SuspendLayout();
             // 
             // Registere
@@ -48,6 +49,7 @@
             this.Registere.TabIndex = 22;
             this.Registere.Text = "Registere";
             this.Registere.UseVisualStyleBackColor = true;
+            this.Registere.Click += new System.EventHandler(this.Registere_Click);
             // 
             // label5
             // 
@@ -85,33 +87,13 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Navn";
             // 
-            // BirthweightText
-            // 
-            this.BirthweightText.Location = new System.Drawing.Point(78, 145);
-            this.BirthweightText.Name = "BirthweightText";
-            this.BirthweightText.Size = new System.Drawing.Size(156, 20);
-            this.BirthweightText.TabIndex = 17;
-            // 
-            // BirthdayText
-            // 
-            this.BirthdayText.Location = new System.Drawing.Point(78, 119);
-            this.BirthdayText.Name = "BirthdayText";
-            this.BirthdayText.Size = new System.Drawing.Size(156, 20);
-            this.BirthdayText.TabIndex = 16;
-            // 
-            // CHRText
-            // 
-            this.CHRText.Location = new System.Drawing.Point(78, 93);
-            this.CHRText.Name = "CHRText";
-            this.CHRText.Size = new System.Drawing.Size(156, 20);
-            this.CHRText.TabIndex = 15;
-            // 
             // NavnText
             // 
             this.NavnText.Location = new System.Drawing.Point(78, 67);
             this.NavnText.Name = "NavnText";
             this.NavnText.Size = new System.Drawing.Size(156, 20);
             this.NavnText.TabIndex = 14;
+            this.NavnText.TextChanged += new System.EventHandler(this.NavnText_TextChanged);
             // 
             // label2
             // 
@@ -124,23 +106,53 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Ny kalv";
             // 
+            // BirtheDate
+            // 
+            this.BirtheDate.Location = new System.Drawing.Point(78, 119);
+            this.BirtheDate.Name = "BirtheDate";
+            this.BirtheDate.Size = new System.Drawing.Size(156, 20);
+            this.BirtheDate.TabIndex = 23;
+            this.BirtheDate.ValueChanged += new System.EventHandler(this.BirtheDate_ValueChanged);
+            // 
+            // BirthWeight
+            // 
+            this.BirthWeight.Location = new System.Drawing.Point(78, 141);
+            this.BirthWeight.Maximum = new decimal(new int[] {
+            400,
+            0,
+            0,
+            0});
+            this.BirthWeight.Name = "BirthWeight";
+            this.BirthWeight.Size = new System.Drawing.Size(156, 20);
+            this.BirthWeight.TabIndex = 24;
+            this.BirthWeight.ValueChanged += new System.EventHandler(this.BirthWeight_ValueChanged);
+            // 
+            // CHR
+            // 
+            this.CHR.Location = new System.Drawing.Point(78, 93);
+            this.CHR.Name = "CHR";
+            this.CHR.Size = new System.Drawing.Size(156, 20);
+            this.CHR.TabIndex = 25;
+            this.CHR.TextChanged += new System.EventHandler(this.CHR_TextChanged);
+            // 
             // NyKalv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.CHR);
+            this.Controls.Add(this.BirthWeight);
+            this.Controls.Add(this.BirtheDate);
             this.Controls.Add(this.Registere);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BirthweightText);
-            this.Controls.Add(this.BirthdayText);
-            this.Controls.Add(this.CHRText);
             this.Controls.Add(this.NavnText);
             this.Controls.Add(this.label2);
             this.Name = "NyKalv";
             this.Text = "NyKalv";
+            ((System.ComponentModel.ISupportInitialize)(this.BirthWeight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,10 +165,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox BirthweightText;
-        private System.Windows.Forms.TextBox BirthdayText;
-        private System.Windows.Forms.TextBox CHRText;
         private System.Windows.Forms.TextBox NavnText;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker BirtheDate;
+        private System.Windows.Forms.NumericUpDown BirthWeight;
+        private System.Windows.Forms.TextBox CHR;
     }
 }

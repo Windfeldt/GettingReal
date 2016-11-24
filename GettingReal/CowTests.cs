@@ -125,7 +125,12 @@ namespace GettingReal
 
             Assert.AreEqual(1, rowsAffected);
 
+        }*//*
+        [TestMethod]
+        public void CanGetFromInputFrom_NyKalv()
+        {
+            Cow cow = new Cow();
+            Assert.AreEqual("Simon", cow.name);
         }*/
-
     }
 }

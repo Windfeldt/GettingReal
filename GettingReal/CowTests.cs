@@ -95,7 +95,7 @@ namespace GettingReal
         {
 
             Cow cow = new Cow();
-            cow.CHR = 5664566;
+            cow.CHR = 5664567;
             cow.name = "Ole Henriksen";
             cow.birthdate = new DateTime(2014, 10, 1);
             cow.birthweight = 45;
@@ -147,15 +147,15 @@ namespace GettingReal
 
         }*/
 
-        // SKRIV DENNE TEST/KODE FÆRDIG
         [TestMethod]
         public void sendSqlSelectToDatabase()
         {
 
             SqlDataReader reader = CowCRUD.Read();
             reader.Read();
-
+            
             Assert.AreEqual(5664564, reader.GetValue(0));
+            CowCRUD.DbConnClose();
 
         }
 

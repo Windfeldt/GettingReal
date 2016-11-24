@@ -12,7 +12,6 @@ namespace GettingReal
 
         private readonly static SqlConnection dbConn;
         
-
         static CowCRUD()
         {
 
@@ -22,7 +21,6 @@ namespace GettingReal
 
         public static int Create(Cow cow)
         {
-
             string sqlString = "INSERT INTO GettingReal_Calves (CHR, Name, Birthdate, Birthweight, DeliveryDate, MaturationDate, OwnerID) VALUES (" + cow.CHR + ", '" + cow.name + "', '" + cow.birthdate.ToShortDateString() + "', " + cow.birthweight + ", '" + cow.deliveryDate.ToShortDateString() + "', '" + cow.maturationDate.ToShortDateString() + "', " + cow.ownerId + ")";
             SqlCommand cmd = new SqlCommand(sqlString, dbConn);
 
@@ -73,6 +71,11 @@ namespace GettingReal
             dbConn.Close();
 
             return rowsAffected;
+        }
+
+        public static void DbConnClose()
+        {
+            dbConn.Close();
         }
 
     }

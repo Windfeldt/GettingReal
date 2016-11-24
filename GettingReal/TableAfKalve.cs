@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace GettingReal
 {
-    public partial class Form1 : Form
+    public partial class TableAfKalve : Form
     {
-        public Form1()
+        public TableAfKalve()
         {
             InitializeComponent();
         }
